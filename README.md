@@ -17,6 +17,9 @@ SMS SENDING PROCESS
 ASSUMPTIONS
 Airtel gives a synscronous response to bank to mobile request
 Mpesa provides asynchronous request
+calltoAirtelAPIs service will make external calls for airtel
+calltoMpesaAPIs service willl make external calls for mpesa
+
 
 DATABASE USED
 currently MYSQL, run out of time to change config file to use H2
