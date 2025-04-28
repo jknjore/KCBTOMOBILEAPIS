@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: studentapp
+  datasource:
+    url: jdbc:mysql://localhost:3306/students?createDatabaseIfNotExist=true
+    username: root
+    password: 4994Kissno
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  servlet:
+    context-path: /v1
+
+endpoint:
+  smsURL: "http://sms.kcbapigateway.co.ke/dispatchsms"
+config:
+  readTimeOut: 90 #seconds
+  connectionTimeOut: 90 #seconds
+  maxSmsSendRetries: 1 #max no of times to retry sending an sms
+  minSmsRetryIntervalMins: 5 #min time in mins before trying resending an sms to customer
+  maxSmsRetryLifespanMins: 15 #max no of times to retry sending an sms
+  smsRetryIterationMins: 5 #global time in mines for fetching sms records that deserve retry
